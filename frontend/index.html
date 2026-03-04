@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🌤️ Weather App</h1>
+
+    <!-- Auth Mode Toggle -->
+    <div id="authToggle" class="auth-toggle">
+      <button id="toggleBtn" class="toggle-link">Don't have an account? Sign up</button>
+    </div>
+
+    <!-- ============ LOGIN FORM ============ -->
+    <div id="loginForm" class="auth-form">
+      <h2>Login</h2>
+      <input 
+        type="text" 
+        id="username" 
+        placeholder="Username" 
+        autocomplete="username"
+        class="form-input"
+      >
+      <input 
+        type="password" 
+        id="password" 
+        placeholder="Password" 
+        autocomplete="current-password"
+        class="form-input"
+      >
+      <button id="loginBtn" class="btn btn-primary">Login</button>
+      <p id="loginMessage" class="message"></p>
+    </div>
+
+    <!-- ============ REGISTRATION FORM ============ -->
+    <div id="registerForm" class="auth-form" style="display: none;">
+      <h2>Create Account</h2>
+      <input 
+        type="text" 
+        id="regUsername" 
+        placeholder="Choose username (3-32 characters)" 
+        autocomplete="username"
+        class="form-input"
+      >
+      <input 
+        type="password" 
+        id="regPassword" 
+        placeholder="Password (6+ characters)" 
+        autocomplete="new-password"
+        class="form-input"
+      >
+      <input 
+        type="password" 
+        id="regPasswordConfirm" 
+        placeholder="Confirm password" 
+        autocomplete="new-password"
+        class="form-input"
+      >
+      <button id="registerBtn" class="btn btn-primary">Register</button>
+      <p id="registerMessage" class="message"></p>
+    </div>
+
+    <!-- ============ WEATHER APP ============ -->
+    <div id="weatherApp" class="weather-app" style="display: none;">
+      <div class="user-info">
+        <p>Logged in as: <strong id="currentUser"></strong></p>
+        <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+      </div>
+
+      <h2>Check Weather</h2>
+      <div class="search-container">
+        <input 
+          type="text" 
+          id="city" 
+          placeholder="Enter city name (e.g., New York)" 
+          class="form-input"
+        >
+        <button id="checkBtn" class="btn btn-primary">Get Weather</button>
+      </div>
+      
+      <div id="weatherResult" class="weather-result"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
